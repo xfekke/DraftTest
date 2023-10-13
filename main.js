@@ -65,6 +65,18 @@ if (num === 1) {
         for (const champ of dataCaide.characters) {
             console.log(champ.name)
         }
+    } else if (playerNum === 4) {
+        console.log(`You chose Uvec`);
+        console.log("He can play the following champs:");
+        for (const champ of dataUvec.characters) {
+            console.log(champ.name)
+        }
+    } else if (playerNum === 5) {
+        console.log(`You chose Goats`);
+        console.log("He can play the following champs:");
+        for (const champ of dataGoats.characters) {
+            console.log(champ.name)
+        }
     } else {
         console.log("Invalid player choice.");
     }
