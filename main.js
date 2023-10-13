@@ -85,6 +85,10 @@ if (num === 1) {
     console.log("1. Engage");
     console.log("2. Support");
     console.log("3. Fighter");
+    console.log("4. Mage");
+    console.log("5. Assassin");
+    console.log("6. Marksman");
+    console.log("7. Tank");
     const roleChoice = prompt("Enter the number of your option - ");
     const roleNum = parseFloat(roleChoice);
 
@@ -104,7 +108,7 @@ if (num === 1) {
         }
     } else if (roleNum === 3) {
         console.log("List of fighter type champions:");
-        for (const champ of dataFekke.characters.concat(dataOz.characters)) {
+        for (const champ of dataFekke.characters.concat(dataOz.characters)(dataCaide.characters)(dataGoats.characters)(dataUvec.characters)) {
             if (champ.role.includes("Fighter")) {
                 console.log(champ.name);
             }
