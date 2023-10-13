@@ -5,7 +5,8 @@
       "role": [
         "Fighter"
       ],
-      "type": "AD"
+      "type": "AD",
+      "prio": "Yes"
     },
     {
       "name": "Darius",

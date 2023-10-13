@@ -5,7 +5,8 @@
       "role": [
         "Engage"
       ],
-      "type": "None"
+      "type": "None",
+      "prio": "No"
     },
     {
       "name": "Rakan",
@@ -13,7 +14,8 @@
         "Engage",
         "Support"
       ],
-      "type": "None"
+      "type": "None",
+      "prio": "Yes"
     }
   ]
 }
