@@ -24,6 +24,8 @@ console.log("1. Player")
 console.log("2. Role")
 console.log("3. Type")
 console.log("4. Prio")
+// Will also add prompt to add new champions to players with their properties
+// Will also add prompt to remove champions from players
 
 var userInput = prompt("Enter number -")
 var num = parseFloat(userInput)
@@ -39,6 +41,7 @@ if (!isNan(num)) {
 if (userInput == 1) {
     console.log("1. Fekke")
     console.log("2. Oz")
+    
 }
 
 
