@@ -2,47 +2,108 @@
 // types: AD, AP
 // prio: yes/no
 // prompt to ask what is needed: What do you need?(prompt): Player(role), Role, Type or Prio.
-
-const fs = require('fs');
+import fs from 'fs';
+import PromptSync from 'prompt-sync';
 
 const rawDataFekke = fs.readFileSync('fekke.json');
 const rawDataOz = fs.readFileSync('oz.json');
-import PromptSync from "prompt-sync"; 
-const prompt = PromptSync({sigint: true}) 
-
+const rawDataCaide = fs.readFileSync('caide.json');
+const rawDataUvec = fs.readFileSync('uvec.json');
+const rawDataGoats = fs.readFileSync('goats.json');
 const dataFekke = JSON.parse(rawDataFekke);
 const dataOz = JSON.parse(rawDataOz);
+const dataCaide = JSON.parse(rawDataCaide);
+const dataUvec = JSON.parse(rawDataUvec);
+const dataGoats = JSON.parse(rawDataGoats);
 
-//console.log(dataFekke);
-//console.log(dataOz);
+const champFekke = dataFekke.name;
+const champOz = dataOz.name;
 
-const champFekke = dataFekke.name
-const champOz = dataOz.name
+console.log("What do you need?");
+console.log("1. Player");
+console.log("2. Role");
+console.log("3. Type");
+console.log("4. Prio");
 
-console.log("What do you need?")
-console.log("1. Player")
-console.log("2. Role")
-console.log("3. Type")
-console.log("4. Prio")
-// Will also add prompt to add new champions to players with their properties
-// Will also add prompt to remove champions from players
+const prompt = PromptSync(); 
 
-var userInput = prompt("Enter number -")
-var num = parseFloat(userInput)
+const userInput = prompt("Enter number -");
+const num = parseFloat(userInput);
 
-if (!isNan(num)) {
-    console.log("You did not enter a valid number")
+if (isNaN(num)) {
+    console.log("You did not enter a valid number");
 } else {
-    console.log("Proceed")
+    console.log("Proceed");
 }
 
-
-//Choose what option 1-4 to proceed with. Another prompt will open for each.
-if (userInput == 1) {
-    console.log("1. Fekke")
-    console.log("2. Oz")
+// Choose what option 1-4 to proceed with. Another prompt will open for each.
+if (num === 1) {
+    console.log("1. Fekke");
+    console.log("2. Oz");
+    console.log("3. Caide");
+    console.log("4. Uvec");
+    console.log("5. Goats");
     
+    const playerChoice = prompt("Enter the number of your option - ");
+    const playerNum = parseFloat(playerChoice);
+
+    if (playerNum === 1) {
+        console.log(`You chose Fekke`);
+        console.log("He can play the following champs:");
+        for (const champ of dataFekke.characters) {
+            console.log(champ.name);
+        }
+    } else if (playerNum === 2) {
+        console.log(`You chose Oz`);
+        console.log("He can play the following champs:");
+        for (const champ of dataOz.characters) {
+            console.log(champ.name)
+        }
+    } else if (playerNum === 3) {
+        console.log(`You chose Caide`);
+        console.log("He can play the following champs:");
+        for (const champ of dataCaide.characters) {
+            console.log(champ.name)
+        }
+    } else {
+        console.log("Invalid player choice.");
+    }
+} else if (num === 2) {
+    console.log("Choose a role:");
+    console.log("1. Engage");
+    console.log("2. Support");
+    console.log("3. Fighter");
+    const roleChoice = prompt("Enter the number of your option - ");
+    const roleNum = parseFloat(roleChoice);
+
+    if (roleNum === 1) {
+        console.log("List of engage type champions:");
+        for (const champ of dataFekke.characters.concat(dataOz.characters)) {
+            if (champ.role.includes("Engage")) {
+                console.log(champ.name);
+            }
+        }
+    } else if (roleNum === 2) {
+        console.log("List of support type champions:");
+        for (const champ of dataFekke.characters.concat(dataOz.characters)) {
+            if (champ.role.includes("Support")) {
+                console.log(champ.name);
+            }
+        }
+    } else if (roleNum === 3) {
+        console.log("List of fighter type champions:");
+        for (const champ of dataFekke.characters.concat(dataOz.characters)) {
+            if (champ.role.includes("Fighter")) {
+                console.log(champ.name);
+            }
+        }
+    } else {
+        console.log("Invalid role choice.");
+    }
 }
+
+
+
 
 
 

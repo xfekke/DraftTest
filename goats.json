@@ -1,0 +1,21 @@
+{
+    "characters": [
+      {
+        "name": "Orianna",
+        "role": [
+          "Mage"
+        ],
+        "type": "AP",
+        "prio": "Yes"
+      },
+      {
+        "name": "Pantheon",
+        "role": [
+          "Assasin",
+          "Fighter"
+        ],
+        "type": "AD",
+        "prio": "No"
+      }
+    ]
+  }

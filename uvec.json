@@ -1,0 +1,21 @@
+{
+    "characters": [
+      {
+        "name": "Taliyah",
+        "role": [
+          "Mage"
+        ],
+        "type": "AP",
+        "prio": "Yes"
+      },
+      {
+        "name": "Kindred",
+        "role": [
+          "Marksman"
+          
+        ],
+        "type": "AD",
+        "prio": "Yes"
+      }
+    ]
+  }
