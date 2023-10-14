@@ -25,7 +25,7 @@ console.log("2. Role");
 console.log("3. Type");
 console.log("4. Prio");
 
-const prompt = PromptSync(); 
+const prompt = PromptSync();
 
 const userInput = prompt("Enter number -");
 const num = parseFloat(userInput);
@@ -43,7 +43,7 @@ if (num === 1) {
     console.log("3. Caide");
     console.log("4. Uvec");
     console.log("5. Goats");
-    
+
     const playerChoice = prompt("Enter the number of your option - ");
     const playerNum = parseFloat(playerChoice);
 
@@ -91,25 +91,54 @@ if (num === 1) {
     console.log("7. Tank");
     const roleChoice = prompt("Enter the number of your option - ");
     const roleNum = parseFloat(roleChoice);
+    const allCharacters = dataFekke.characters.concat(dataOz.characters, dataCaide.characters, dataGoats.characters, dataUvec.characters);
 
     if (roleNum === 1) {
         console.log("List of engage type champions:");
-        for (const champ of dataFekke.characters.concat(dataOz.characters)) {
+        for (const champ of allCharacters) {
             if (champ.role.includes("Engage")) {
                 console.log(champ.name);
             }
         }
     } else if (roleNum === 2) {
         console.log("List of support type champions:");
-        for (const champ of dataFekke.characters.concat(dataOz.characters)) {
+        for (const champ of allCharacters) {
             if (champ.role.includes("Support")) {
                 console.log(champ.name);
             }
         }
     } else if (roleNum === 3) {
         console.log("List of fighter type champions:");
-        for (const champ of dataFekke.characters.concat(dataOz.characters)(dataCaide.characters)(dataGoats.characters)(dataUvec.characters)) {
+        for (const champ of allCharacters) {
             if (champ.role.includes("Fighter")) {
+                console.log(champ.name);
+            }
+        }
+    } else if (roleNum === 4) {
+        console.log("List of mage type champions:");
+        for (const champ of allCharacters) {
+            if (champ.role.includes("Mage")) {
+                console.log(champ.name);
+            }
+        }
+    } else if (roleNum === 5) {
+        console.log("List of assassin type champions:");
+        for (const champ of allCharacters) {
+            if (champ.role.includes("Assassin")) {
+                console.log(champ.name);
+            }
+        }
+    } else if (roleNum === 6) {
+        console.log("List of marksmen type champions:");
+        for (const champ of allCharacters) {
+            if (champ.role.includes("Marksman")) {
+                console.log(champ.name);
+            }
+        }
+    } else if (roleNum === 7) {
+        console.log("List of tanktype champions:");
+        for (const champ of allCharacters) {
+            if (champ.role.includes("Tank")) {
                 console.log(champ.name);
             }
         }
