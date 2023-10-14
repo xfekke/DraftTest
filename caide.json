@@ -1,0 +1,20 @@
+{
+    "characters": [
+      {
+        "name": "Kai'sa",
+        "role": [
+          "Marksman"
+        ],
+        "type": ["AD", "AP"],
+        "prio": "Yes"
+      },
+      {
+        "name": "Ziggs",
+        "role": [
+          "Mage"
+        ],
+        "type": "AP",
+        "prio": "No"
+      }
+    ]
+  }

@@ -1,0 +1,19 @@
+{
+  "characters": [
+    {
+      "name": "Sett",
+      "role": [
+        "Fighter"
+      ],
+      "type": "AD",
+      "prio": "Yes"
+    },
+    {
+      "name": "Darius",
+      "role": [
+        "Fighter"
+      ],
+      "type": "AD"
+    }
+  ]
+}

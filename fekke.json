@@ -1,0 +1,21 @@
+{
+  "characters": [
+    {
+      "name": "Leona",
+      "role": [
+        "Engage"
+      ],
+      "type": "None",
+      "prio": "No"
+    },
+    {
+      "name": "Rakan",
+      "role": [
+        "Engage",
+        "Support"
+      ],
+      "type": "None",
+      "prio": "Yes"
+    }
+  ]
+}
